@@ -7,7 +7,8 @@
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 
-
+server "sample-web-server", user: "deploy", roles: %w{app db web}
+config.require_master_key = true
 
 # role-based syntax
 # ==================
