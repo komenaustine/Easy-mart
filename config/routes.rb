@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
-
+  resources :gallery_thumbnail, only: [:index]
+  resources :high_resolution_image, only: [:index]
+  resources :cart_item
+  post '/login', to: 'auth#create'
+  get '/auth',to: 'user#show'
+  # delete '/logout',to: 'auth#destroy'
+  resources :cart
+  resources :product
+  resources :testimonials
+  resources :user
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
